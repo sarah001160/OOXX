@@ -132,9 +132,9 @@ body{
     justify-content:center;/*內容水平置中*/
     align-items:center;/*內容垂直置中*/
     color:white;
-    font-size:5rem;
+    font-size:5rem;/*字體大小*/
     flex-direction:column;   
-    display:none; 
+    display:none; /*預設不顯示*/
 }
 .winning-message button{
     font-size:3rem;
