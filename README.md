@@ -26,11 +26,34 @@
 換叉叉下棋時,.board的元素中移除.circle的classname  並加上.x的classname
 
 
-圈圈的製作 圓形,一個白的大圈 一個黑的小圈,形成一個圈圈
+
+###### 圈圈的與叉叉  圖形的製作,使用偽元素::before 與::after
+
+圓形,一個白的大圈 一個黑的小圈,形成一個空心圈型
 
 使用::before 及::after 製作圈圈圖形以及叉叉圖形
 
 下過ＯＯ或ＸＸ的格子，不得在重複下ＯＯ或ＸＸ
+
+
+當.cell棋格裡有.x classname時
+
+
+設定該.cell.x的 ::before及::after元素，背景色皆為紅色(或其他你想要的顏色)
+
+.cell.x::before移動45度角度 / 
+
+ 
+.cell.x::after移動-45度角度\ 
+
+
+這兩個線條可以形成一個叉叉 X
+
+
+*使用css屬性transform:
+值分別為rotate(45deg)及rotate(-45deg)
+
+
 
 
 
