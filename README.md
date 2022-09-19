@@ -1,4 +1,4 @@
-# Tic-tac-toe 井字圈圈叉叉製作 
+# Tic-tac-toe 井字圈圈叉叉
 來自youtube的教學影片
 
 <!-- This content will not appear in the rendered MarkdownReadme.md寫法press兩次enter留下空白兩列,則可以換行
