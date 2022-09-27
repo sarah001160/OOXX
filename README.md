@@ -14,7 +14,7 @@ Html寫出一個 ```<div class="board" id="board"></div>```
 .board的CSS設定 
 
 ```   
-width:100vw; /*view width*/
+   width:100vw; /*view width*/
     
     height:100vh; /*view height*/
     
@@ -29,7 +29,8 @@ width:100vw; /*view width*/
     align-items:center; /*物件本身從上到下置中*/
     
     grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  
-    ```
+    
+ ```
 
 
 
@@ -44,10 +45,10 @@ width:100vw; /*view width*/
 第７，８，９個下方沒有框線
 
 
-.cell的CSS設定
 
 ```
-.cell{
+.cell的CSS設定
+
     width:var(--cell-size);
     height:var(--cell-size);
     border:1px solid black;
@@ -55,29 +56,35 @@ width:100vw; /*view width*/
     justify-content:center;
     align-items:center;
     position:relative;
-    cursor:pointer;
-}
+    cursor:pointer;    
+```
 
-:root{/*Css變數*/
+```:root{/*Css變數*/
     --cell-size:100px;
     --mark-size:calc(var(--cell-size) * .9);
 }
 ```
 
 
-```
 ．CSS變數命名規則
+
 「兩個dash--」加「自命名cell」加「一個dash-」加「自命名size」 
+
 --cell-size:值
 
 .使用CSS變數的方式
+
  前方加上「var()」
+ 
  var(--cell-size)
 
 .計算CSS變數的方式
+
  前方加上calc( 使用CSS變數方式 * 倍數)
+ 
  calc(var(--cell-size)* .9)
- ```
+ 
+ 
  
 
 ## 圈圈與叉叉，換邊下棋的設定
