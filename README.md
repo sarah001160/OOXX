@@ -1,5 +1,5 @@
 # Tic-tac-toe 井字圈圈叉叉
-來自youtube的教學影片
+來自youtube的教學影片:
 
 <!-- This content will not appear in the rendered MarkdownReadme.md寫法press兩次enter留下空白兩列,則可以換行
  -->
@@ -13,6 +13,7 @@ Html寫出一個
 #board的內層子元素請寫出9次　``` <div class="cell" data-cell></div>```
 
 .board的CSS設定 
+```
     width:100vw; /*view width*/
     
     height:100vh; /*view height*/
@@ -28,7 +29,7 @@ Html寫出一個
     align-items:center; /*物件本身從上到下置中*/
     
     grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/
-
+```
 
 會使用CSS grid格線，切一個 井 形狀總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
 
