@@ -8,7 +8,8 @@
 先切出棋盤:  
 
 Html寫出一個
-``` <div class="board" id="board"></div>```
+```
+<div class="board" id="board"></div>```
 
 #board的內層子元素請寫出9次　``` <div class="cell" data-cell></div>```
 
@@ -43,7 +44,7 @@ Html寫出一個
 
 .cell的CSS設定
 
-‵‵‵　.cell{
+```.cell{
     width:var(--cell-size);
     height:var(--cell-size);
     border:1px solid black;
@@ -70,17 +71,17 @@ Html寫出一個
 .計算CSS變數的方式
  前方加上calc( 使用CSS變數方式 * 倍數)
  calc(var(--cell-size)* .9)
- ‵‵‵
+ ```
  
 
 ## 圈圈與叉叉，換邊下棋的設定
 
 
-棋盤的classname命名為.board
+棋盤(九個.cell)外圍有包著一個.board的div,從.board這個div下手設定換邊下棋
 
-當這次換圈圈下棋，.board的元素中多加一個.circle的classname
+當這次換O下棋，.board的元素中多加一個.circle的classname
 
-換叉叉下棋時,.board的元素中移除.circle的classname  並加上.x的classname
+換X下棋時,.board的元素中移除.circle的classname  並加上.x的classname
 
 
 
