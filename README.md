@@ -7,13 +7,12 @@
 
 先切出棋盤:  
 
-Html寫出一個
-
-```<div class="board" id="board"></div>```
+Html寫出一個 ```<div class="board" id="board"></div>```
 
 #board的內層子元素請寫出9次　``` <div class="cell" data-cell></div>```
 
 .board的CSS設定 
+
 ```   width:100vw; /*view width*/
     
     height:100vh; /*view height*/
@@ -28,7 +27,8 @@ Html寫出一個
     
     align-items:center; /*物件本身從上到下置中*/
     
-    grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/```
+    grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  ```
+
 
 
 .cell的div會形成總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
@@ -40,6 +40,7 @@ Html寫出一個
 第３，６，９個右邊沒有框線條 (3n+3)
 
 第７，８，９個下方沒有框線
+
 
 .cell的CSS設定
 
@@ -58,8 +59,9 @@ Html寫出一個
     --cell-size:100px;
     --mark-size:calc(var(--cell-size) * .9);
 }
-‵‵‵
-‵‵‵．CSS變數命名規則
+```
+
+```．CSS變數命名規則
 「兩個dash--」加「自命名cell」加「一個dash-」加「自命名size」 
 --cell-size:值
 
@@ -70,6 +72,7 @@ Html寫出一個
 .計算CSS變數的方式
  前方加上calc( 使用CSS變數方式 * 倍數)
  calc(var(--cell-size)* .9)
+ 
  ```
  
 
