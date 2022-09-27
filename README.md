@@ -31,16 +31,47 @@ Html寫出一個
     grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/
 ```
 
-會使用CSS grid格線，切一個 井 形狀總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
+.cell的div會形成總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
 
-１，２，３上方沒有框線  
+第１，２，３個上方沒有框線  
 
-１，４，７左邊沒有框線（3n+1，ｎ＝０結果１，n=1結果4, n=2結果7)
+第１，４，７個左邊沒有框線（3n+1，ｎ＝０結果１，n=1結果4, n=2結果7)
 
-３，６，９右邊沒有框線條 (3n+3)
+第３，６，９個右邊沒有框線條 (3n+3)
 
-７，８，９下方沒有框線
+第７，８，９個下方沒有框線
 
+.cell的CSS設定
+
+‵‵‵　.cell{
+    width:var(--cell-size);
+    height:var(--cell-size);
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    cursor:pointer;
+}
+
+:root{/*Css變數*/
+    --cell-size:100px;
+    --mark-size:calc(var(--cell-size) * .9);
+}
+‵‵‵
+‵‵‵．CSS變數命名規則
+「兩個dash--」加「自命名cell」加「一個dash-」加「自命名size」 
+--cell-size:值
+
+.使用CSS變數的方式
+ 前方加上「var()」
+ var(--cell-size)
+
+.計算CSS變數的方式
+ 前方加上calc( 使用CSS變數方式 * 倍數)
+ calc(var(--cell-size)* .9)
+ ‵‵‵
+ 
 
 ## 圈圈與叉叉，換邊下棋的設定
 
