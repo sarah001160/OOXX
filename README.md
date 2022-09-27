@@ -13,7 +13,8 @@ Html寫出一個 ```<div class="board" id="board"></div>```
 
 .board的CSS設定 
 
-```   width:100vw; /*view width*/
+```   
+width:100vw; /*view width*/
     
     height:100vh; /*view height*/
     
@@ -27,7 +28,8 @@ Html寫出一個 ```<div class="board" id="board"></div>```
     
     align-items:center; /*物件本身從上到下置中*/
     
-    grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  ```
+    grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  
+    ```
 
 
 
@@ -44,7 +46,8 @@ Html寫出一個 ```<div class="board" id="board"></div>```
 
 .cell的CSS設定
 
-```.cell{
+```
+.cell{
     width:var(--cell-size);
     height:var(--cell-size);
     border:1px solid black;
@@ -61,7 +64,9 @@ Html寫出一個 ```<div class="board" id="board"></div>```
 }
 ```
 
-```．CSS變數命名規則
+
+```
+．CSS變數命名規則
 「兩個dash--」加「自命名cell」加「一個dash-」加「自命名size」 
 --cell-size:值
 
@@ -72,7 +77,6 @@ Html寫出一個 ```<div class="board" id="board"></div>```
 .計算CSS變數的方式
  前方加上calc( 使用CSS變數方式 * 倍數)
  calc(var(--cell-size)* .9)
- 
  ```
  
 
