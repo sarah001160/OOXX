@@ -5,7 +5,29 @@
  -->
 
 
-先切出棋盤:  用到CSS grid格線，切一個 井 形狀總共有九格，
+先切出棋盤:  
+
+Html寫出一個<div class="board" id="board"></div>，#board的內層子元素請寫出9次　<div class="cell" data-cell></div>
+
+.board的CSS設定 
+    width:100vw; /*view width*/
+    
+    height:100vh; /*view height*/
+    
+    display:grid;
+    
+    justify-content: center;/*水平左到右排列置中*/
+    
+    align-content: center;/*垂直上到下排列置中*/
+    
+    justify-items:center;/*物件本身從左到右置中*/
+    
+    align-items:center; /*物件本身從上到下置中*/
+    
+    grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/
+
+
+會使用CSS grid格線，切一個 井 形狀總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
 
 １，２，３上方沒有框線  
 
@@ -16,7 +38,7 @@
 ７，８，９下方沒有框線
 
 
-## 圈圈與叉叉，換邊的設定
+## 圈圈與叉叉，換邊下棋的設定
 
 
 棋盤的classname命名為.board
