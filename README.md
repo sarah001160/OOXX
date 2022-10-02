@@ -44,7 +44,11 @@ Html寫出一個 ```<div class="board" id="board"></div>```
 
 第７，８，９個下方沒有框線
 
+```:root{/*Css變數*/
+    --cell-size:100px;
+    --mark-size:calc(var(--cell-size) * .9);
 
+```
 
 ```
 .cell的CSS設定
@@ -59,11 +63,7 @@ Html寫出一個 ```<div class="board" id="board"></div>```
     cursor:pointer;    
 ```
 
-```:root{/*Css變數*/
-    --cell-size:100px;
-    --mark-size:calc(var(--cell-size) * .9);
-}
-```
+
 
 
 ．CSS變數命名規則
