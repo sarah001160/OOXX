@@ -54,6 +54,7 @@ HTML
     :root{/*Css變數*/
     --cell-size:100px;
     --mark-size:calc(var(--cell-size) * .9);
+    }
 
 ```
 
