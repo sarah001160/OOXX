@@ -42,13 +42,13 @@ HTML
 
 .cell的div會形成總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
 
-第１，２，３個上方沒有框線  
+第１、２、３個div上方沒有框線（CSS設定border-top:none;)  
 
-第１，４，７個左邊沒有框線（3n+1，ｎ＝０結果１，n=1結果4, n=2結果7)
+第１、４、７個div左邊沒有框線（3n+1，ｎ＝０結果１，n=1結果4, n=2結果7　／CSS設定border-left:none;)
 
-第３，６，９個右邊沒有框線條 (3n+3)
+第３、６、９個div右邊沒有框線條 (3n+3) （CSS設定border-right:none;)
 
-第７，８，９個下方沒有框線
+第７、８、９個div下方沒有框線 （CSS設定border-bottom:none;)
 
 ```:root{/*Css變數*/
     --cell-size:100px;
