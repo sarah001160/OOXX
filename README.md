@@ -7,11 +7,17 @@
 
 先切出棋盤:  
 
-Html寫出一個 ```<div class="board" id="board"></div>```
+HTML
 
-#board的內層子元素請寫出9次　``` <div class="cell" data-cell></div>```
 
-.board的CSS設定 
+```<div class="board" id="board"></div>```
+
+#board的內層子元素請寫出9次　
+
+
+``` <div class="cell" data-cell></div>```
+
+.board的CSS設定: 
 
 ```   
    width:100vw; /*view width*/
