@@ -50,7 +50,8 @@ HTML
 
 第７、８、９個div下方沒有框線 （CSS設定border-bottom:none;)
 
-```:root{/*Css變數*/
+```
+    :root{/*Css變數*/
     --cell-size:100px;
     --mark-size:calc(var(--cell-size) * .9);
 
