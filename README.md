@@ -12,7 +12,7 @@ HTML
 
 ```<div class="board" id="board"></div>```
 
-#board的內層子元素請寫出9次　
+#board的內層子元素<div class="cell">這個請寫9次　
 
 
 ``` <div class="cell" data-cell></div>```
