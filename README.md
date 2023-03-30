@@ -24,15 +24,15 @@ HTML
     
     height:100vh; /*view height*/
     
-    display:grid;
+    display:grid; /*主軸預設 水平左到右*/
     
-    justify-content: center;/*水平左到右排列置中*/
+    justify-content: center;/*跟著主軸 排列置中*/
     
-    align-content: center;/*垂直上到下排列置中*/
+    align-content: center;
     
-    justify-items:center;/*物件本身從左到右置中*/
+    justify-items:center;
     
-    align-items:center; /*物件本身從上到下置中*/
+    align-items:center; /*跟著交叉軸 排列置中*/
     
     grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  
     
