@@ -52,8 +52,8 @@ grid-template-columns:repeat(3,auto);  / *每3個 div 成一列, 9個總共有�
 ```
 :root{
 /* CSS變數 */
---cell-size:100px; /* 變數寫法兩個橫槓、名字、一個dash、名字，用語意化的命名規則 */
---mark-size:calc(var(--cell-size) * .9); /* 使用 CSS 變數，外面包一個var(); 計算 CSS 變數，外面包一個calc() */
+--cell-size:100px; 
+--mark-size:calc(var(--cell-size) * .9); 
 }
 
 ```
@@ -93,39 +93,46 @@ grid-template-columns:repeat(3,auto);  / *每3個 div 成一列, 9個總共有�
  
 ## 圈圈與叉叉，換邊下棋的設定
 
-棋盤(九個.cell)外圍有包著一個.board的div,從.board這個div下手設定換邊下棋
+棋盤(九個 .cell )外圍有包著一個 .board 的 div, 從 .board 這個 div 下手設定換邊下棋
 
-當這次換O下棋，.board的元素中多加一個.circle的classname
+當這次換 O 下棋，.board 的元素中多加一個 .circle 的 classname
 
-換X下棋時,.board的元素中移除.circle的classname  並加上.x的classname
+換 X 下棋時, .board 的元素中移除 .circle 的 classname  並加上classname「.x 」
 
 
 
-## 圈圈與叉叉  圖形的製作 使用偽元素::before 與::after
+## 圈圈與叉叉  圖形的製作 使用偽元素 ::before 與 ::after
 
 圓形，一個黑色大圓、一個白色小圓 ，形成一個空心圓型(圈圈)
 
-使用::before 及::after 製作圈圈圖形以及叉叉圖形
+使用 ::before 及 ::after 製作圈圈圖形以及叉叉圖形
 
-下過圈圈或叉叉的.cell格子  不得再重複下任一圈圈或叉叉
-
-
-當.cell棋格裡有.x 的classname時
+下過圈圈或叉叉的 .cell 格子，不得再重複下任一圈圈或叉叉
 
 
-設定該.cell.x的 ::before及::after元素，背景色皆為紅色(或其他你想要的顏色)
+當 .cell 棋格裡有 .x 的 classname 時
 
-.cell.x::before移動45度角度 / 
 
- 
-.cell.x::after移動-45度角度\ 
+設定該 .cell.x 的 ::before 及 ::after 元素，背景色皆為紅色(或你想要的顏色)
 
+.cell.x::before 讓它移動45度角度  / 
+
+```
+.cell.x::before {
+    transform: rotate(45deg);
+}
+```
+
+.cell.x::after 讓它移動-45度角度 \ 
+
+```
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+```
 
 這兩個線條可以形成一個叉叉 X
 
-
-*使用css屬性transform:
-值分別為rotate(45deg)及rotate(-45deg)
 
 
 
