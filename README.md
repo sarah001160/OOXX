@@ -19,47 +19,47 @@ HTML
 .board的CSS設定: 
 
 ```   
-width:100vw; /*view width*/
+width:100vw; /* view width 與視窗同寬 */
 
-height:100vh; /*view height*/
+height:100vh; /* view height 與視窗同高 */
     
-display:grid; /*主軸預設 水平左到右*/
+display:grid; /* 主軸預設 水平左到右 */
     
-justify-content: center;/*跟著主軸 排列置中*/
+justify-content: center; /* 跟著主軸 排列置中 */
 
 align-content: center;
     
 justify-items:center;
     
-align-items:center; /*跟著交叉軸 排列置中*/
+align-items:center;  /* 跟著交叉軸 排列置中 */
     
-grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  
+grid-template-columns:repeat(3,auto);  / *每3個 div 成一列, 9個總共有三列 九宮格棋盤 */  
     
  ```
 
 
 
-.cell的div會形成總共有九格，(從左到右1,2,3,換行4,5,6換行7,8,9)
+.cell 的 div 會形成總共有九格，(從左到右1、2、3，換行4、5、6，換行7、8、9)
 
-第１、２、３個div上方沒有框線（CSS設定border-top:none;)  
+第１、２、３個div上方沒有框線（CSS 設定 border-top:none;)  
 
-第１、４、７個div左邊沒有框線（3n+1，ｎ＝０結果１，n=1結果4, n=2結果7　／CSS設定border-left:none;)
+第１、４、７個div左邊沒有框線（3n+1，n=0 結果１，n=1 結果4, n=2 結果7　／CSS設定border-left:none;)
 
 第３、６、９個div右邊沒有框線條 (3n+3) （CSS設定border-right:none;)
 
-第７、８、９個div下方沒有框線 （CSS設定border-bottom:none;)
+第７、８、９個div下方沒有框線 （CSS 設定 border-bottom:none;)
 
 ```
-    :root{/*Css變數*/
-    --cell-size:100px;
-    --mark-size:calc(var(--cell-size) * .9);
-    }
+:root{
+/* CSS變數 */
+--cell-size:100px; /* 變數寫法兩個橫槓、名字、一個dash、名字，用語意化的命名規則 */
+--mark-size:calc(var(--cell-size) * .9); /* 使用 CSS 變數，外面包一個var(); 計算 CSS 變數，外面包一個calc() */
+}
 
 ```
 
 ```
 .cell的CSS設定
-
     width:var(--cell-size);
     height:var(--cell-size);
     border:1px solid black;
@@ -69,8 +69,6 @@ grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 �
     position:relative;
     cursor:pointer;    
 ```
-
-
 
 
 ．CSS變數命名規則
@@ -93,9 +91,7 @@ grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 �
  
  
  
-
 ## 圈圈與叉叉，換邊下棋的設定
-
 
 棋盤(九個.cell)外圍有包著一個.board的div,從.board這個div下手設定換邊下棋
 
@@ -107,7 +103,7 @@ grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 �
 
 ## 圈圈與叉叉  圖形的製作 使用偽元素::before 與::after
 
-圓形  一個黑色大圓 一個白色小圓  形成一個空心圓型(圈圈)
+圓形，一個黑色大圓、一個白色小圓 ，形成一個空心圓型(圈圈)
 
 使用::before 及::after 製作圈圈圖形以及叉叉圖形
 
