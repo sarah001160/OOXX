@@ -1,8 +1,7 @@
 # Tic-tac-toe 井字圈圈叉叉
 [來自youtube的教學影片](https://www.youtube.com/watch?v=Y-GkMjUZsmM)
 
-<!-- This content will not appear in the rendered MarkdownReadme.md寫法press兩次enter留下空白兩列,則可以換行
- -->
+<!-- This content will not appear in the rendered MarkdownReadme.md寫法press兩次enter留下空白兩列,則可以換行 -->
 
 
 先切出棋盤:  
@@ -20,21 +19,21 @@ HTML
 .board的CSS設定: 
 
 ```   
-   width:100vw; /*view width*/
+width:100vw; /*view width*/
+
+height:100vh; /*view height*/
     
-    height:100vh; /*view height*/
+display:grid; /*主軸預設 水平左到右*/
     
-    display:grid; /*主軸預設 水平左到右*/
+justify-content: center;/*跟著主軸 排列置中*/
+
+align-content: center;
     
-    justify-content: center;/*跟著主軸 排列置中*/
+justify-items:center;
     
-    align-content: center;
+align-items:center; /*跟著交叉軸 排列置中*/
     
-    justify-items:center;
-    
-    align-items:center; /*跟著交叉軸 排列置中*/
-    
-    grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  
+grid-template-columns:repeat(3,auto) /*每3個div成一列,9個總共有三列 九宮格棋盤*/  
     
  ```
 
